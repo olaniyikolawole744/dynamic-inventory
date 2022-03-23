@@ -13,7 +13,7 @@ pipeline {
              steps {
                 sh 'chmod 755 ansible/inventory/hosts/ec2.ini'
                 sh 'chmod 755 ansible/inventory/hosts/ec2.py'
-                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook/playbook.yml -i inventory/hosts/ec2.py 
+                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook/playbook.yml -i ansible/inventory/hosts/ec2.py 
             }
         }   
     }
