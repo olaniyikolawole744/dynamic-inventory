@@ -9,7 +9,7 @@ pipeline {
     }
 
     stages {
-        stage('PLAY ANSIBLE BOOK') {
+        stage('PLAY ANSIBLE BOOK.') {
              steps {
                 sh 'chmod 755 inventory/hosts/ec2.ini'
                 sh 'chmod 755 inventory/hosts/ec2.py'
