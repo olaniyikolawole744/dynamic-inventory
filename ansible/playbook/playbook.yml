@@ -8,3 +8,4 @@
       path: /etc/some_directory
       state: directory
       mode: '0755'
+      
