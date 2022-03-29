@@ -11,6 +11,7 @@ pipeline {
     stages {
         stage('PLAY ANSIBLE BOOK..') {
              steps {
+                 sh 'ls '
                 sh 'chmod 755 ansible/inventory/hosts/ec2.ini'
                 sh 'chmod 755 ansible/inventory/hosts/ec2.py'
                 sh 'pip install boto'
