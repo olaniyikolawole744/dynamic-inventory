@@ -15,7 +15,7 @@ pipeline {
                 sh 'chmod 755 ansible/inventory/hosts/ec2.ini'
                 sh 'chmod 755 ansible/inventory/hosts/ec2.py'
                 sh 'pip install boto'
-                sh 'ansible ALL = NOPASSWD && sudo su - ansible && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook ansible/playbook/playbook.yml -i ansible/inventory/hosts/ec2.py -vvvvv' 
+                sh 'chmod 400 /tmp/tf-packer && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook --private-key /tmp/tf-packer -u ansible ansible/playbook/playbook.yml -i ansible/inventory/hosts/ec2.py -C' 
             }
         }   
     }
