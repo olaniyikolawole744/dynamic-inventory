@@ -15,7 +15,7 @@ pipeline {
                 sh 'chmod 755 ansible/inventory/hosts/ec2.ini'
                 sh 'chmod 755 ansible/inventory/hosts/ec2.py'
                 sh 'pip install boto'
-                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook --become-user ansible ansible/playbook/playbook.yml -i ansible/inventory/hosts/ec2.py -vvvvv' 
+                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook --become-user ansible --private-key /tmp/tf-packer ansible/playbook/playbook.yml -i ansible/inventory/hosts/ec2.py -vvvvv' 
                 }
         }   
     }
