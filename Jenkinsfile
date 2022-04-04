@@ -15,7 +15,7 @@ pipeline {
                 sh 'chmod 755 ansible/inventory/hosts/ec2.ini'
                 sh 'chmod 755 ansible/inventory/hosts/ec2.py'
                 sh 'pip install boto'
-                sh 'ssh 54.196.31.114'
+                sh 'ssh ec2-user@54.196.31.114'
                  }
         }   
     }
