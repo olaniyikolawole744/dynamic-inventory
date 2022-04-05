@@ -5,7 +5,7 @@
 
   - name: Create a directory if it does not exist
     ansible.builtin.file:
-      path: /etc/some_directory
+      path: /tmp/jagaban-jagaban
       state: directory
       mode: '0755'
   
