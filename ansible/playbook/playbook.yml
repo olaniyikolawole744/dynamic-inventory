@@ -10,4 +10,4 @@
       mode: '0755'
   
   - name: List files on remote server
-    ansible.builtin.shell: ls
+    ansible.builtin.shell: ls /tmp/
